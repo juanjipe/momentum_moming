@@ -1,16 +1,16 @@
-const clockContainer = docment.querySelector(.js-clock);
-const clockTitle = clockContainer.querySelector("");
+const clockContainer = docment.querySelector(".js-clock");
+const clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {
-    const date = new Date ();
-    const hours = date.getUTCHours();
-    const minutes = date.getUTCMinutes();
-    const seconds = date.getSseconds();
+  const date = new Date();
+  const hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  const seconds = date.getSseconds();
 
-    clockTitle.innerText = `${hours} : ${minutes} : ${seconds}`; 
+  clockTitle.innerText = `${hours} : ${minutes} : ${seconds}`;
 }
 function init() {
-    getTime();
-    setInterval(getTime, 1000);
+  getTime();
+  setInterval(getTime, 1000);
 }
 init();
